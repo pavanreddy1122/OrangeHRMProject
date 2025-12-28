@@ -19,13 +19,13 @@ public class LoginPageStepDef {
         page = new LoginPage(driver);
     }
 
-   /* @After
+    @After
     public void tearDown(){
         if(driver!=null){
             driver.quit();
         }
 
-    }*/
+    }
 
     @Given("I am on the Orange login page")
     public void i_am_on_the_orange_login_page() {
