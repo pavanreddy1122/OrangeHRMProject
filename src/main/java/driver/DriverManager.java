@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import utils.ConfigReader;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
 

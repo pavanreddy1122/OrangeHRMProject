@@ -2,32 +2,14 @@ package org.OrangeHRM.stepdef;
 
 import base.BaseClass;
 import driver.DriverManager;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.opencart.pages.LoginPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import utils.ConfigReader;
 
 public class LoginPageStepDef extends BaseClass {
      private LoginPage page;
-     //private WebDriver driver;
-
-   /* @Before
-    public void setup(){
-        page = new LoginPage(driver);
-    }
-
-    @After
-    public void tearDown(){
-        if(driver!=null){
-            driver.quit();
-        }
-
-    }*/
 
     @Given("I am on the Orange login page")
     public void i_am_on_the_orange_login_page() {

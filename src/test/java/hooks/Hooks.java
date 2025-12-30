@@ -11,10 +11,10 @@ public class Hooks {
         System.out.println("Test Started");
     }
 
-    /*@After
+    @After
     public void teardown(){
         if(DriverManager.getDriver()!=null){
             DriverManager.quitDriver();
         }
-    }*/
+    }
 }

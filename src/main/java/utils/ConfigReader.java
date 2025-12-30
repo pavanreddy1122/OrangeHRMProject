@@ -1,7 +1,6 @@
 package utils;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
@@ -15,7 +14,7 @@ public class ConfigReader {
             pro.load(fin);
         }
         catch(Exception e){
-            e.printStackTrace();
+           System.out.println(e.getMessage());
         }
     }
 
