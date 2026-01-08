@@ -12,8 +12,5 @@ public class BaseClass {
         driver.get(ConfigReader.getProperty("url"));
     }
 
-    public void waitForelement(int seconds) throws InterruptedException {
-        Thread.sleep(seconds*1000);
-    }
 
 }
