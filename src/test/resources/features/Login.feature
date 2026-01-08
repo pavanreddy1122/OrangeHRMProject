@@ -5,13 +5,13 @@ Feature: Login functionality for OrangeHRM employee management
   Background:
     Given I am on the Orange login page
 
-  @sanity
+  @login
   Scenario: Verify login with valid credentials
     Given I have entered valid username and password
     When I click the login button
     Then I should able to login successfull
 
-  @sanity
+  @login
   Scenario Outline: Verify login with invalid username
     Given I have entered "<Usernsme>" and "<password>"
     When I click the login button
@@ -20,7 +20,7 @@ Feature: Login functionality for OrangeHRM employee management
       | Usernsme | password | Error message       |
       | admin123 | admin123 | Invalid credentials |
 
-  @sanity
+  @login
   Scenario Outline: Verify login with invalid password
     Given I have entered "<Usernsme>" and "<password>"
     When I click the login button
@@ -29,7 +29,7 @@ Feature: Login functionality for OrangeHRM employee management
       | Usernsme | password | Error message |
       | Admin | Admin | Invalid credentials |
 
-  @sanity
+  @login
   Scenario Outline: Verify login with invalid password
     Given I have entered "<Usernsme>" and "<password>"
     When I click the login button
@@ -38,22 +38,31 @@ Feature: Login functionality for OrangeHRM employee management
       | Usernsme | password | Error message1      | Error message2 |
       |          |          | Required |   Required             |
 
-  @sanity
+  @login
   Scenario: Verify Forgot Password functionality
     When I click the Forgot Password Link
     Then I should able to enter resetPassword Page
 
-  @sanity
+  @login
   Scenario: Verify user is navigated to Dashboard after successful login
     Given I have entered valid username and password
     When I click the login button
     Then I should able to navigated to Dashboard
 
-  @sanity1
+  @login
   Scenario: Verify Logout functionality
     Given I have entered valid username and password
     When I click the login button
     Then I should able to login successfull
+    When I click the profile Icon
+    And I click the logout button
+    Then User verify returned login page successfully
+
+  @login
+  Scenario: Verify password masking in the password field
+    Given I have entered valid username and password
+    Then user verify the password field is masking successfully
+
 
 
 
